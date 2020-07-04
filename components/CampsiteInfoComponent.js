@@ -1,36 +1,44 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ScrollView } from 'react-native';
 import { Card } from 'react-native-elements';
 import { CAMPSITES } from '../shared/campsites';
+import { PROMOTIONS } from '../shared/promotions';
+import { PARTNERS } from '../shared/partners';
 
-function RenderCampsite({ campsite }) {
-  if (campsite) {
+function RenderItem({ item }) {
+  if (item) {
     return (
-      <Card featuredTitle={campsite.name} image={require('./images/react-lake.jpg')}>
-        <Text style={{ margin: 10 }}>{campsite.description}</Text>
+      <Card featuredTitle={item.name} image={require('./images/react-lake.jpg')}>
+        <Text style={{ margin: 10 }}>{item.description}</Text>
       </Card>
     );
   }
   return <View />;
 }
 
-class CampsiteInfo extends Component {
+class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       campsites: CAMPSITES,
+      promotions: PROMOTIONS,
+      partners: PARTNERS,
     };
   }
 
   static navigationOptions = {
-    title: 'Campsite Information',
+    title: 'Home',
   };
 
   render() {
-    const campsiteId = this.props.navigation.getParam('campsiteId');
-    const campsite = this.state.campsites.filter(campsite => campsite.id === campsiteId)[0];
-    return <RenderCampsite campsite={campsite} />;
+    return (
+      <ScrollView>
+        <RenderItem item={this.state.campsites.filter(campsite => campsite.featured)[0]} />
+        <RenderItem item={this.state.promotions.filter(promotion => promotion.featured)[0]} />
+        <RenderItem item={this.state.partners.filter(partner => partner.featured)[0]} />
+      </ScrollView>
+    );
   }
 }
 
-export default CampsiteInfo;
+export default Home;
