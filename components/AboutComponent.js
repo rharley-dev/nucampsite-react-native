@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 
 class About extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      campsites: CAMPSITES,
-    };
+    this.state = {};
   }
+
+  static navigationOptions = {
+    title: 'About Us',
+  };
+
   render() {
-    return <ScrollView> </ScrollView>;
+    return (
+      <ScrollView>
+        <Text></Text>
+      </ScrollView>
+    );
   }
 }
 
