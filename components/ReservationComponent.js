@@ -20,7 +20,9 @@ class Reservation extends Component {
 
   handleReservation() {
     console.log(JSON.stringify(this.state));
-    let textAlert = `Number of Campers: ${this.state.campers} \n Hike-In? ${this.state.hikeIn} \n Date: ${this.state.date}`;
+    let textAlert = `Number of Campers: ${this.state.campers} \n 
+    Hike-In? ${this.state.hikeIn} \n 
+    Date: ${this.state.date}`;
     Alert.alert(
       'Begin Search?',
       `${textAlert}`,
