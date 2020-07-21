@@ -53,7 +53,7 @@ class Reservation extends Component {
 
   render() {
     return (
-      <Animatable.View animation="zoomIn" duration={2000} delay={1000}>
+      <Animatable.View animation="zoomIn" duration={2000} delay={1000} style={styles.container}>
         <View style={styles.formRow}>
           <Text style={styles.formLabel}>Number of Campers</Text>
           <Picker
@@ -113,33 +113,15 @@ class Reservation extends Component {
             accessibilityLabel="Tap me to search for available campsites to reserve"
           />
         </View>
-        {/* <Modal
-          animationType={'slide'}
-          transparent={false}
-          visible={this.state.showModal}
-          onRequestClose={() => this.toggleModal()}
-        >
-          <View style={styles.modal}>
-            <Text style={styles.modalTitle}>Search Campsite Reservations</Text>
-            <Text style={styles.modalText}>Number of Campers: {this.state.campers}</Text>
-            <Text style={styles.modalText}>Hike-In?: {this.state.hikeIn ? 'Yes' : 'No'}</Text>
-            <Text style={styles.modalText}>Date: {this.state.date}</Text>
-            <Button
-              onPress={() => {
-                this.toggleModal();
-                this.resetForm();
-              }}
-              color="#5637DD"
-              title="Close"
-            />
-          </View>
-        </Modal> */}
       </Animatable.View>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   formRow: {
     alignItems: 'center',
     justifyContent: 'center',
