@@ -13,11 +13,12 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "co.nucamp.nucampsite.student"
+    },
+    "android": {
+      "package": "co.nucamp.nucampsite.student"
     },
     "web": {
       "favicon": "./assets/favicon.png"
