@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView, Image } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, CameraRoll } from 'react-native';
 import { Input, CheckBox, Button, Icon } from 'react-native-elements';
 import * as SecureStore from 'expo-secure-store';
 import * as ImagePicker from 'expo-image-picker';
@@ -145,6 +145,7 @@ class RegisterTab extends Component {
         aspect: [1, 1],
       });
       if (!capturedImage.cancelled) {
+        CameraRoll.saveToCameraRoll(capturedImage.uri);
         console.log(capturedImage);
         this.processImage(capturedImage.uri);
       }
@@ -159,6 +160,7 @@ class RegisterTab extends Component {
         format: ImageManipulator.SaveFormat.PNG,
       }
     );
+    CameraRoll.saveToCameraRoll(processedImage.uri);
     console.log(processedImage);
     this.setState({ imageUrl: processedImage.uri });
   };
