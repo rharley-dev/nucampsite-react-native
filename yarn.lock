@@ -2161,11 +2161,6 @@ expo-mail-composer@7.0.0:
   dependencies:
     query-string "^6.2.0"
 
-expo-media-library@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/expo-media-library/-/expo-media-library-8.3.0.tgz#2f5278fea31fb43f8c0e973cbb365c61b225e441"
-  integrity sha512-7ktRLlolgDI7P3R3kLSj+KMzPABBMUmQQcKRwqyyzSmkq8tH48ywoNYOUFZMPs9iKpMmP/D58LKdJlbMBsP8/A==
-
 expo-permissions@7.0.0, expo-permissions@~7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/expo-permissions/-/expo-permissions-7.0.0.tgz#f4135c3cf8e49c673a9a714459a1eb2b40fe2092"
@@ -3693,9 +3688,9 @@ mkdirp@^0.5.1:
     minimist "^1.2.5"
 
 moment@^2.22.0:
-  version "2.27.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
-  integrity sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
+  integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
 
 morgan@^1.9.0:
   version "1.10.0"
